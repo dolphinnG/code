@@ -18,3 +18,19 @@ Design a rate limiter that restricts the number of requests a user can make with
 - Return true if the user has not exceeded their limit, false otherwise.
 - Clean up old data to prevent memory leaks.
 
+Template: 
+```python
+class RateLimiter:
+    def __init__(self, limit: int, window_minutes: int = 1):
+        """
+        Initialize rate limiter
+        Args:
+            limit: Maximum number of requests allowed per time window
+            window_minutes: Time window in minutes
+        """
+        self.limit = limit
+        self.window = window_minutes * 60
+
+    def is_allowed(self, user_id: str) -> bool:
+        # Implement the logic below
+```
